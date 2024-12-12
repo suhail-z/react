@@ -40,3 +40,73 @@
 .read-the-docs {
   color: #888;
 }
+.works{
+  width:500px;
+  border-radius: 25px;
+  height: 35px;
+  background-color: beige;
+  border: none;
+  padding-left: 15px;
+  color: black;
+  margin-left: 20px;
+}
+.works:active{
+  background-color: rgb(200, 247, 200);
+}
+
+.add-btn{
+  height: 39px;
+  background-color: rgb(2, 158, 2);
+  position: relative;
+  right: 35px;
+  top: 4px;
+  border-radius: 25px;
+  width: 100px;
+}
+.add-btn:hover{
+  background-color: rgb(1, 103, 1);
+}
+.delete-btn{
+  background-color: rgb(184, 49, 0);
+  position:absolute;
+  left: 905px; 
+  height:35px;
+  width: 35px;
+  padding: 0px;
+  border-radius: 18px;
+}
+.delete-btn:hover{
+  color: rgb(184, 49, 0);
+  background-color: white;
+  font-size: larger;
+  font-weight:bolder;
+  border-width: 1.5px;
+  border-color: rgb(184, 49, 0);
+}
+.update-btn:hover{
+  color: rgb(6, 43,116);
+  background-color: white;
+  font-size: larger;
+  font-weight:bolder;
+  border-width: 1.5px;
+  border-color:rgb(6, 43,116)
+}
+.update-btn{
+  position: absolute;
+  background-color: rgb(6, 43,116);
+  left: 860px;
+  height: 35px;
+  width: 35px;
+  border-radius: 18px;
+  padding: 0px;
+}
+.list{
+  background-color: grey;
+  max-width:600px;
+  border-radius: 25px;
+  height: 35px;
+  text-align: left;
+  padding-left: 15px;
+  font-size: medium;
+  font-weight: 500;
+}
