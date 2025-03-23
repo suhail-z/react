@@ -1,42 +1,138 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  font-family: 'Mulish', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: auto;
+  margin: 50px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 3px rgb(231, 163, 163);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input {
+  width: 500px;
+  border-radius: 25px;
+  height: 35px;
+  border: solid rgb(173, 159, 99);
+  outline: none;
+  margin: 10px 20px;
+  padding-left: 10px;
+  font-size: medium;
 }
 
-.card {
-  padding: 2em;
+.add-btn {
+  background-color: green;
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  transition: 0.3s ease;
 }
 
-.read-the-docs {
+.add-btn:hover {
+  background-color: rgb(2, 105, 2);
+}
+
+li {
+  padding: 5px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: large;
+}
+
+li button {
+  padding: 3px 15px;
+  margin: 2px 8px;
+  border-radius: 15px;
+}
+
+.update {
+  background-color: rgb(131, 30, 225);
+}
+
+.delete {
+  background-color: tomato;
+}
+
+button {
+  box-shadow: 0px 1px 8px 1px rgb(85, 83, 88);
+  font-weight: 550;
+  color: aliceblue;
+}
+
+.clear {
+  color: black;
+  background-color: aliceblue;
+}
+
+button:disabled {
+  background-color: #ddd;
   color: #888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.clear:hover {
+  background-color: lightgray;
+}
+
+.update:hover {
+  background-color: rgb(94, 0, 173);
+}
+
+.delete:hover {
+  background-color: rgb(255, 99, 71);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 20px;
+  }
+
+  .input-sec {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .display ol {
+    padding-left: 10px;
+  }
+
+  .display li {
+    font-size: 14px;
+  }
 }
