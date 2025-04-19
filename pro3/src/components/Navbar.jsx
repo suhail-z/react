@@ -1,18 +1,43 @@
-import react from 'react';
+import react, { useContext, useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
-import '/src/css/navbar.css'
+import '/src/css/navbar.css';
+import {cartContext} from "../App.jsx"
+
 export const Navbar = () => {
+
+  const{cart} = useContext(cartContext);
+  const[cartTotal,setCartTotal] = useState(0);
+
+  useEffect(()=>{
+    setCartTotal(cart.length);
+  },[cart])
+
+
   return (
     <>
     <nav>
-        <h2>
-            Frizzy
-        </h2>
-        <ul>
-           <li> <Link to="/">Home</Link></li>
-           <li><Link to="/Cart">Cart</Link></li> 
-            <li></li><Link to="/Product">product</Link>
-        </ul>
+        <Link to='/'>
+         <div className="logo">
+            <img src="src/assets/frizzy-logo2.png" alt="logo" />
+          </div>  
+         
+        </Link>
+        <div className="routes">
+          
+          <h3>search</h3>
+          <h3>Sign in</h3>
+
+          <Link to="/Cart">
+         <div className="cart-icon">
+         <h2>{cartTotal}</h2>
+         <img src="src/assets/round-plate-nbg.png" />
+          </div> 
+          </Link>
+
+        </div>
+         
+            
+        
     </nav>
     </>
   )

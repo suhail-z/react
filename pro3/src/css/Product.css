@@ -71,13 +71,13 @@ img{
 }
 .add:hover{
     box-shadow: 0px 0.5px 5px 0.5px rgb(120, 122, 120);
-    background-color: rgba(71, 212, 109, 0.68);
+    background-color: rgba(235, 238, 236, 0.68);
 }
 .remove:hover{
     box-shadow: 0px 0.5px 5px 0.5px rgb(120, 122, 120);
-    background-color: rgba(248, 92, 92, 0.6);
+    background-color: rgba(239, 238, 238, 0.6);
 }
-.merchant{
+.merchant{ 
     display: inline-flex;
 }
 h4{

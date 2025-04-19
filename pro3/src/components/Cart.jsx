@@ -17,10 +17,11 @@ export const Cart = () => {
   function removeFromCart(id){
     dispatch({type:'remove',payload:{id}})
   }
+  
   return (
     <div className="cart-display">
       {
-        cart  ? (<>
+        cart.length !== 0 ? (<>
          <h2>{'Total : ₹ '+total+'.00'}</h2>
     {
       cart.map(item=>(   

@@ -7,8 +7,7 @@ nav{
     width: 100%;
 }
 ul li{
-
-    display: inline-flex;
+    display: flex;
     gap:5px;
 }
 a{
@@ -16,4 +15,37 @@ a{
     text-decoration: none;
     gap:5px;
     padding: 5px;
+}
+.cart-icon img{
+    width:65px;
+    height:65px;
+}
+.cart-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;   
+    position: relative;
+    top: -18px;
+    max-height: 75px;
+}
+.cart-icon h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top:50px;
+    color:red;
+}
+.logo img{
+    width:150px;
+    height:40px;
+    margin-left: 5px;
+}
+.routes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
 }
