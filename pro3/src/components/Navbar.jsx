@@ -1,11 +1,11 @@
 import react, { useContext, useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
 import '/src/css/navbar.css';
-import {cartContext} from "../App.jsx"
+import { useSelector } from 'react-redux';
 
 export const Navbar = () => {
 
-  const{cart} = useContext(cartContext);
+  const cart = useSelector((state)=>state.cartData);
   const[cartTotal,setCartTotal] = useState(0);
 
   useEffect(()=>{

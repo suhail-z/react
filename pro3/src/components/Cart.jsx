@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import {cartContext} from '../App';
+import { useDispatch, useSelector } from 'react-redux';
+import { update , remove } from '../slice/cart.js'
 import '../css/cart.css'
 
 export const Cart = () => {
-  const {cart,dispatch} = useContext(cartContext);
-  console.log(cart);
+  const dispatch = useDispatch();
+  const cart = useSelector(state=>state.cartData);
   const [total,setTotal] = useState(0);
 
   useEffect(()=>{
@@ -12,10 +13,10 @@ export const Cart = () => {
   },[cart])
 
   function updateCart(id,quantity){
-    dispatch({type:'update',payload:{id,quantity}})
+    dispatch(update({id,quantity}));
   }
   function removeFromCart(id){
-    dispatch({type:'remove',payload:{id}})
+    dispatch(remove(id));
   }
   
   return (

@@ -1,18 +1,20 @@
 import {useCallback, useContext}from 'react'
 import '/src/css/Product.css';
-import { cartContext } from '../App';
+import { useSelector,useDispatch } from 'react-redux';
+import { add,remove } from '../slice/cart.js'
 
 
 export const Product = ({item}) => {
 
-      const {cart,dispatch} = useContext(cartContext);
+      const cart = useSelector(state=>state.cartData);
+      const dispatch = useDispatch();
       
       const addToCart=useCallback((item)=>{
-        dispatch({type:'add',payload:{item}});
+        dispatch(add(item));
       },[dispatch]);
 
       const removeFromCart=useCallback((id)=>{
-        dispatch({type:'remove',payload:{id}})
+        dispatch(remove(id));
       },[dispatch])
 
   return (
